@@ -8,7 +8,7 @@ description = input(
     "A short description for your validator ( e.g. Build, maintain and advance Bittensor):\n"
 )
 
-CK = "5EHVUNEqz1js5LdnW56hFpqKAV2pEGa7GCA2z6r7GVdLyTZE"
+CK = "<your hotkey ss58 address>"
 keypair = Keypair(ss58_address=CK)
 
 delegates_entry = dict()
