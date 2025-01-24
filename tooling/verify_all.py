@@ -14,7 +14,7 @@ for hotkey, delegate_info in information_dict.items():
     signature = delegate_info["signature"].encode()
 
     del delegate_info["signature"]
-    information_str = json.dumps({hotkey:delegate_info})
+    information_str = json.dumps({hotkey: delegate_info})
 
-    if not keypair.verify( data = information_str, signature = unhexlify( signature ) ):
+    if not keypair.verify(data=information_str, signature=unhexlify(signature)):
         raise ValueError(f"Invalid signature for {delegate_info['name']} ({hotkey=})")
